@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>let and const</title>
+    <style>
+            pre {
+                font-family: 'Courier New' Courier monospace;
+                background: rgb(241, 241, 241);
+            }
+
+            body {
+                margin: 0 auto;
+                width: 96%;
+            }
+    </style>
+  </head>
+  <body>
+    <p>Please see console for output</p>
+    <pre>
+    <code>
+      /**
+      * constant is a single assignment variable.
+      */
+
+      {
+        const string = 'Hello World!';
+        console.log(string);
+        string = 'Hi World!'; //throw error
+      }
+
+
+
+
+      /**
+      * var declares a globle scope variable.
+      */
+
+      for (var i = 0; i < 10; i++) {
+        console.log('var counter -> ' + i);
+        setTimeout(function() {
+          console.log('The var counter number after time out is -> ' + i);
+        }, 1000);
+      }
+
+
+
+
+
+      /**
+      * let declares a block scope local variable.
+      */
+
+      for (let i = 0; i < 10; i++) {
+        console.log('let counter -> ' + i);
+        setTimeout(function() {
+          console.log('The let counter number after time out is -> ' + i);
+        }, 1000);
+      }
+    </code>
+  </pre>
+
+    <script>
+      {
+        const string = 'Hello World!';
+        console.log(string);
+      }
+
+      for (var i = 0; i < 10; i++) {
+        console.log('var counter -> ' + i);
+        setTimeout(function() {
+          console.log('The var counter number after time out is -> ' + i);
+        }, 1000);
+      }
+
+      for (let i = 0; i < 10; i++) {
+        console.log('let counter -> ' + i);
+        setTimeout(function() {
+          console.log('The let counter number after time out is -> ' + i);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
